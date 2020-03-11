@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import OuterFloorMap from './OuterFloorMap'
+import FirstFloor from './FirstFloor'
+import { Columns } from 'react-bulma-components'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ maxHeight: "300px", maxWidth: '400px' }}>
+      <OuterFloorMap>
+        <FirstFloor />
+      </OuterFloorMap>
+
+      <Columns>
+        <Columns.Column>
+          <OuterFloorMap>
+            <FirstFloor />
+          </OuterFloorMap>
+        </Columns.Column>
+      </Columns>
     </div>
   );
 }
