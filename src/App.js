@@ -6,9 +6,11 @@ import { Columns } from 'react-bulma-components'
 function App() {
   return (
     <div style={{ maxHeight: "300px", maxWidth: '400px' }}>
-      <OuterFloorMap>
-        <FirstFloor />
-      </OuterFloorMap>
+      <div>
+        <OuterFloorMap>
+          <FirstFloor />
+        </OuterFloorMap>
+      </div>
 
       <Columns>
         <Columns.Column>
